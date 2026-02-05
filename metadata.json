@@ -1,0 +1,9 @@
+{
+  "name": "EDRIVE-FIREBASE",
+  "description": "Ride sharing for Hafizabad City. Ao Chalen!",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone",
+    "camera"
+  ]
+}
