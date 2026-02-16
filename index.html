@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+    <title>eDrive - Ao Chalen</title>
+    
+    <meta name="theme-color" content="#c1ff22">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="eDrive">
+    <meta name="application-name" content="eDrive">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <link rel="manifest" href="/manifest.json" />
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c1ff22'/%3E%3Ctext x='16' y='24' font-family='Arial, sans-serif' font-weight='900' font-style='italic' font-size='22' text-anchor='middle' fill='black'%3Ee%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='45' fill='%23c1ff22'/%3E%3Ctext x='96' y='145' font-family='Arial, sans-serif' font-weight='900' font-style='italic' font-size='145' text-anchor='middle' fill='black'%3Ee%3C/text%3E%3C/svg%3E" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <style>
+      :root {
+        --app-bg: #080808;
+        --app-surface: #111111;
+        --app-text: #ffffff;
+        --app-text-muted: #71717a;
+        --app-border: rgba(255,255,255,0.05);
+        --app-lime: #c1ff22;
+      }
+
+      .light-mode {
+        --app-bg: #f8fafc;
+        --app-surface: #ffffff;
+        --app-text: #0f172a;
+        --app-text-muted: #64748b;
+        --app-border: #e2e8f0;
+        --app-lime: #84cc16;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--app-bg);
+        color: var(--app-text);
+        margin: 0;
+        overflow: hidden;
+        height: 100vh;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #root { height: 100%; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .leaflet-container { background: var(--app-bg) !important; }
+      body:not(.light-mode) .leaflet-tile-pane {
+        filter: brightness(0.6) invert(100%) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+      }
+      .leaflet-control-attribution { display: none !important; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

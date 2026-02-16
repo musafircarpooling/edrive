@@ -1,0 +1,37 @@
+
+{
+  "id": "edrive-hafizabad-pwa-v2",
+  "name": "eDrive Hafizabad",
+  "short_name": "eDrive",
+  "description": "Exclusive ride sharing for Hafizabad City. Ao Chalen!",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#000000",
+  "theme_color": "#c1ff22",
+  "orientation": "portrait",
+  "categories": ["travel", "transportation"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='120' fill='%23c1ff22'/%3E%3Ctext x='256' y='380' font-family='Arial, sans-serif' font-weight='900' font-style='italic' font-size='380' text-anchor='middle' fill='black'%3Ee%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='45' fill='%23c1ff22'/%3E%3Ctext x='96' y='145' font-family='Arial, sans-serif' font-weight='900' font-style='italic' font-size='145' text-anchor='middle' fill='black'%3Ee%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Request Ride",
+      "short_name": "New Ride",
+      "url": "/?action=new_ride",
+      "icons": [{ "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='20' fill='%23c1ff22'/%3E%3Ctext x='48' y='70' font-family='Arial' font-weight='900' font-size='60' text-anchor='middle' fill='black'%3E+%3C/text%3E%3C/svg%3E", "sizes": "96x96" }]
+    }
+  ]
+}
